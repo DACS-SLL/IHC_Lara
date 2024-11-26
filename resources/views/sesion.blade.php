@@ -16,8 +16,8 @@
         </header>        
         <main class="mt-10">
             <div class="flex items-center justify-center gap-10 mb-5">
-                <div class="flex flex-col items-center gap-4">
-                    <a href="{{ route('plantillas') }}" class="block w-full px-10 py-6 bg-purple-600 text-white text-xl rounded-lg transition duration-300 hover:bg-purple-700 ml-auto mr-auto">
+                <div class="flex flex-col items-start gap-4">
+                    <a href="{{ route('plantillas') }}" class="block w-full px-10 py-6 bg-purple-200 text-white text-xl rounded-lg transition duration-300 hover:bg-purple-700 ml-auto mr-auto">
                         Plantillas
                     </a>
                     <a href="{{ route('actividades') }}" class="block w-full px-10 py-6 bg-purple-600 text-white text-xl rounded-lg transition duration-300 hover:bg-purple-700 ml-auto mr-auto">

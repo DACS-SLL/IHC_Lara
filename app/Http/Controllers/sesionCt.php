@@ -13,7 +13,7 @@ class sesionCt extends Controller
 
     public function showPlantillas()
     {
-        return "Veremos plantillas";
+        return view('welcome');
     }
 
     public function showActividades()
