@@ -11,3 +11,6 @@ Route::get('/plantillas', [sesionCt::class, "showPlantillas"])->name('plantillas
 Route::get('/actividades', [sesionCt::class, "showActividades"])->name('actividades');
 
 Route::get('/multimedia', [sesionCt::class, "showMultimedia"])->name('multimedia');
+
+Route::get('/home', [HomeCt::class, 'index'])->name('home');
+
