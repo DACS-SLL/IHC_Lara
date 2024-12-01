@@ -18,7 +18,7 @@ class sesionCt extends Controller
 
     public function showActividades()
     {
-        return "Vermoas actividades";
+        return view('Actividades');
     }
 
     public function showMultimedia()
