@@ -13,8 +13,6 @@ Route::get('/actividades', [sesionCt::class, "showActividades"])->name('activida
 
 Route::get('/multimedia', [sesionCt::class, "showMultimedia"])->name('multimedia');
 
-Route::get('/home', [HomeCt::class, 'index'])->name('home');
-
 Route::get('/', [LoginController::class, 'login'])->name('login');
 Route::post('/login', [LoginController::class, 'processLogin'])->name('login.process');
 Route::get('/menu', [LoginController::class, 'menuPrincipal'])->name('menu');
