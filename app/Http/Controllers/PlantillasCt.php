@@ -16,4 +16,30 @@ class PlantillasCt extends Controller
 
         return view('Sesion/plantillas', compact('templates'));
     }
+
+    public function registro()
+    {
+        return view('RegistroS/registrar-sesiones');
+    }
+
+    public function store(Request $request)
+    {
+        $request->validate([
+            'nombre' => 'required|string|max:255',
+            'seccion' => 'required|string|max:255',
+            'archivo' => 'required|file|max:2048' // Máximo 2 GB
+        ]);
+
+        // Almacenar el archivo subido
+        //$path = $request->file('archivo')->store('archivos', 'public');
+
+        // Guardar la sesión en la base de datos (opcional)
+        // Sesion::create([
+        //     'nombre' => $request->nombre,
+        //     'seccion' => $request->seccion,
+        //     'archivo' => $path
+        // ]);
+
+        return back()->with('success', 'Sesión registrada exitosamente.');
+    }
 }
