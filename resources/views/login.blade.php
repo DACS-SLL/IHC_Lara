@@ -72,12 +72,10 @@
     </style>
 </head>
 <body>
-    <!-- Logo fuera del cuadro -->
     <div class="logo">
         <img src="{{ asset('images/logo.png') }}" alt="Logo">
     </div>
-
-    <!-- Cuadro de inicio de sesión -->
+    
     <div class="login-container">
         <h2>Ingrese su cuenta</h2>
         <form>
