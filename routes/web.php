@@ -1,8 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use  App\Http\Controllers\HomeCt;
-use  App\Http\Controllers\sesionCt;
+use App\Http\Controllers\HomeCt;
+use App\Http\Controllers\sesionCt;
 use App\Http\Controllers\LoginController;
 
 
@@ -17,10 +17,7 @@ Route::get('/multimedia', [sesionCt::class, "showMultimedia"])->name('multimedia
 Route::get('/home', [HomeCt::class, 'index'])->name('home');
 
 Route::get('/', [LoginController::class, 'login'])->name('login');
-Route::post('/login', [LoginController::class, 'processLogin'])->name('processLogin');
+Route::post('/login', [LoginController::class, 'processLogin'])->name('login.process');
 Route::get('/menu', [LoginController::class, 'menuPrincipal'])->name('menu');
 
-Route::get('/menu', function () {
-    return view('menu');
-});
 

@@ -75,16 +75,20 @@
     <div class="logo">
         <img src="{{ asset('images/logo.png') }}" alt="Logo">
     </div>
-    
+
     <div class="login-container">
         <h2>Ingrese su cuenta</h2>
-        <form>
-            <label for="username">Usuario</label>
-            <input type="text" id="username" name="username" placeholder="Ingrese su usuario" required>
-
-            <label for="password">Contraseña</label>
-            <input type="password" id="password" name="password" placeholder="Ingrese su contraseña" required>
-
+        <form method="POST" action="{{ route('login.process') }}">
+            @csrf
+            <!-- Campos del formulario -->
+            <div>
+                <label for="usuario">Usuario:</label>
+                <input type="text" id="usuario" name="usuario" required>
+            </div>
+            <div>
+                <label for="password">Contraseña:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
             <button type="submit">Iniciar sesión</button>
         </form>
     </div>
