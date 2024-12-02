@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class LoginController extends Controller
+class LoginCt extends Controller
 {
     // Método para mostrar el formulario de login
     public function login()
