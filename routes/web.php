@@ -15,4 +15,10 @@ Route::get('/multimedia', [sesionCt::class, "showMultimedia"])->name('multimedia
 
 Route::get('/home', [HomeCt::class, 'index'])->name('home');
 
-Route::get('/login', [LoginController::class, 'showLogin'])->name('login');
+Route::get('/login', [LoginController::class, 'login'])->name('login');
+Route::post('/login', [LoginController::class, 'processLogin'])->name('processLogin');
+Route::get('/menu', [LoginController::class, 'menuPrincipal'])->name('menu');
+
+Route::get('/menu', function () {
+    return view('menu');
+});
