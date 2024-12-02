@@ -8,21 +8,21 @@ class sesionCt extends Controller
 {
     public function __invoke()
     {
-        return view('sesion');
+        return view('Menu/sesion');
     }
 
     public function showPlantillas()
     {
-        return view('welcome');
+        return view('Sesion/plantillas');
     }
 
     public function showActividades()
     {
-        return view('Actividades');
+        return view('Sesion/Actividades');
     }
 
     public function showMultimedia()
     {
-        return "Vereos multimedia";
+        return view("Sesion/recursos");
     }
 }

@@ -9,7 +9,7 @@ class LoginCt extends Controller
     // Método para mostrar el formulario de login
     public function login()
     {
-        return view('login');
+        return view('Principal/login');
     }
 
     // Método para procesar el login
@@ -24,7 +24,7 @@ class LoginCt extends Controller
             return redirect()->route('menu');
         }
 
-        // Si no son correctas, regresa con un mensaje de error
+        // Si no son correctas, regresa con un mensaje de error - Esto se tiene que mejorar, no manda el error
         return back()->with('error', 'Usuario o contraseña incorrectos');
     }
 
@@ -47,6 +47,6 @@ class LoginCt extends Controller
             ],
         ];
 
-        return view('menu', compact('opciones'));
+        return view('Principal/menu', compact('opciones'));
     }
 }

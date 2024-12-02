@@ -18,9 +18,6 @@
         <header class="flex items-center justify-between bg-white p-4 shadow-md">
             <div class="flex items-center">
                 <img src="{{ asset('images/logo.png') }}" alt="Logo InnovEduca" class="h-12">
-                <h1 class="text-indigo-700 text-5xl font-bold ml-4">
-                    Recursos
-                </h1>
             </div>
             <a href="{{ route('menu') }}" class="flex items-center">
                 <img src="{{ asset('images/home.png') }}" alt="Home" class="h-12 w-12 mr-2">
@@ -56,7 +53,12 @@
                         </button>
                     </div>
                 </div>
-            </div>    
+            </div> 
+            <div>
+                <a href="{{ route('sesiones.index') }}" class="flex items-center">
+                    <img src="{{ asset('images/flechaIzq.png') }}" alt="Home" class="h-16 w-16 mr-2">
+                </a>
+            </div>   
         </main>
     </div>
     <script src="{{ asset('js/videos.js') }}"></script>

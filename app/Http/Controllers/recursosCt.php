@@ -8,6 +8,6 @@ class recursosCt extends Controller
 {
     public function __invoke()
     {
-        return view('recursos');
+        return view('Sesion/recursos');
     }
 }
