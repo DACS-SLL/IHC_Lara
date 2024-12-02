@@ -8,7 +8,7 @@ function updateCarousel() {
     const carousel = document.getElementById('template-carousel');
     carousel.innerHTML = `
         <div class="template-card">
-            <img src="/images/templates/${templates[currentTemplateIndex].image}" alt="${templates[currentTemplateIndex].name}" class="h-full w-full object-cover">
+            <img src="/images/templates/${templates[currentTemplateIndex].image}" alt="${templates[currentTemplateIndex].name}" class="h-48 w-48 object-cover">
         </div>
     `;
 }

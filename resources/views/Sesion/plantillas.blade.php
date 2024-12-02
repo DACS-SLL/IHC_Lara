@@ -18,9 +18,6 @@
         <header class="flex items-center justify-between bg-white p-4 shadow-md">
             <div class="flex items-center">
                 <img src="{{ asset('images/logo.png') }}" alt="Logo InnovEduca" class="h-12">
-                <h1 class="text-indigo-700 text-5xl font-bold ml-4">
-                    Plantillas
-                </h1>
             </div>
             <a href="{{ route('menu') }}" class="flex items-center">
                 <img src="{{ asset('images/home.png') }}" alt="Home" class="h-12 w-12 mr-2">
@@ -29,15 +26,15 @@
         </header>        
         <main class="mt-10">
             <h2 class="text-5xl text-purple-600 font-bold mb-9">Selecciona una Plantilla</h2>
-            <div class="relative">
+            <div class="relative flex items-center justify-center">
                 <!-- Botón Izquierda -->
                 <button class="absolute left-0 bg-purple-200 p-2 rounded-full" onclick="prevTemplate()">
                     <img src="{{ asset('images/flechaIzq.png') }}" alt="Prev" class="h-8 w-8">
                 </button>
                 <!-- Contenedor de Plantillas -->
-                <div id="template-carousel" class="flex gap-4 overflow-x-auto">
+                <div id="template-carousel" class="flex gap-4 overflow-x-auto mx-20">
                     @foreach($templates as $template)
-                        <div class="template-card">
+                        <div class="template-card flex-shink-0">
                             <img src="{{ asset('images/templates/' . $template['image']) }}" alt="{{ $template['name'] }}" class="h-full w-full object-cover">
                         </div>
                     @endforeach
