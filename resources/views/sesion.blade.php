@@ -29,7 +29,7 @@
                     <a href="{{ route('actividades') }}" class="block w-full px-10 py-6 bg-purple-600 text-white text-xl rounded-lg transition duration-300 hover:bg-purple-700 ml-auto mr-auto">
                         Actividades
                     </a>
-                    <a href="{{ route('multimedia') }}" class="block w-full px-10 py-6 bg-purple-600 text-white text-xl rounded-lg transition duration-300 hover:bg-purple-700 ml-auto mr-auto">
+                    <a href="{{ route('recursos.index') }}" class="block w-full px-10 py-6 bg-purple-600 text-white text-xl rounded-lg transition duration-300 hover:bg-purple-700 ml-auto mr-auto">
                         Multimedia
                     </a>
                 </div>
@@ -38,6 +38,11 @@
                 </div>
             </div>            
         </main>
+        <div>
+            <a href="{{ route('menu') }}" class="flex items-center">
+                <img src="{{ asset('images/flechaIzq.png') }}" alt="Home" class="h-16 w-16 mr-2">
+            </a>
+        </div>
     </div>
 </body>
 </html>
