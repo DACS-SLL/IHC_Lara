@@ -31,7 +31,7 @@ class PlantillasCt extends Controller
         ]);
 
         // Almacenar el archivo subido
-        //$path = $request->file('archivo')->store('archivos', 'public');
+        $path = $request->file('archivo')->store('archivos', 'public');
 
         // Guardar la sesión en la base de datos (opcional)
         // Sesion::create([

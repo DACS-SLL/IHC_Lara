@@ -15,11 +15,13 @@
 <body class="bg-gray-50 font-sans m-0 p-0">
     <div class="container mx-auto text-center p-5">
         <header class="flex items-center justify-between bg-white p-4 shadow-md">
-            <img src="{{ asset('images/logo.png') }}" alt="Logo InnovEduca" class="h-12">
+            <a href="{{ route('login') }}">
+                <img src="{{ asset('images/logo.png') }}" alt="Logo InnovEduca" class="h-12">
+            </a>
             <h1 class="text-indigo-700 text-5xl font-bold ml-4">
                 Menú Principal
             </h1>
-        </header>        
+        </header>            
         <main class="mt-10">
             <div class="flex items-center justify-center gap-10 mb-5">
                 <div class="flex items-start gap-14">
@@ -36,7 +38,7 @@
                         <img src="{{ asset('images/biblioteca.png') }}" alt="Biblioteca" class="w-48 h-48">
                     </div>
                 </div>
-            </div>            
+            </div>         
         </main>
     </div>
 </body>
