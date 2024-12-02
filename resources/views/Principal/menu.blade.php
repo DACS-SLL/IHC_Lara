@@ -32,7 +32,7 @@
                         <img src="{{ asset('images/sesiones.png') }}" alt="Sesiones" class="w-48 h-48">
                     </div>
                     <div class="menu-item flex flex-col items-center">
-                        <button class="px-8 py-4 mb-4 text-white bg-purple-600 text-2xl rounded hover:bg-purple-700" onclick="window.location='{{ route('sesiones.index') }}'">Biblioteca</button>
+                        <button class="px-8 py-4 mb-4 text-white bg-purple-600 text-2xl rounded hover:bg-purple-700" onclick="window.location='{{ route('biblioteca.index') }}'">Biblioteca</button>
                         <img src="{{ asset('images/biblioteca.png') }}" alt="Biblioteca" class="w-48 h-48">
                     </div>
                 </div>
