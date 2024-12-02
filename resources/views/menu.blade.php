@@ -77,25 +77,30 @@
         }
     </style>
 </head>
-<body>
-    <header>
-        <img src="{{ asset('images/logo.png') }}" alt="InnovEduca" class="logo">
-    </header>
-    <main>
-        <div class="menu-container">
-            <div class="menu-item">
-                <button>Reportes</button>
-                <img src="{{ asset('images/tarea.png') }}" alt="Reportes">
+<body class="bg-gray-50 font-sans m-0 p-0">
+    <div class="container mx-auto text-center p-5">
+        <header class="flex items-center justify-between bg-white p-4 shadow-md">
+            <img src="{{ asset('images/logo.png') }}" alt="Logo InnovEduca" class="h-12">
+            <h1 class="text-indigo-700 text-5xl font-bold ml-4">
+                Sesión de Aprendizaje
+            </h1>
+        </header> 
+        <main>
+            <div class="menu-container">
+                <div class="menu-item">
+                    <button onclick="window.location='{{ route('sesiones.index') }}'">Reportes</button>
+                    <img src="{{ asset('images/tarea.png') }}" alt="Reportes">
+                </div>
+                <div class="menu-item">
+                    <button onclick="window.location='{{ route('sesiones.index') }}'">Sesiones</button>
+                    <img src="{{ asset('images/sesiones.png') }}" alt="Sesiones">
+                </div>
+                <div class="menu-item">
+                    <button onclick="window.location='{{ route('sesiones.index') }}'">Biblioteca</button>
+                    <img src="{{ asset('images/biblioteca.png') }}" alt="Biblioteca">
+                </div>
             </div>
-            <div class="menu-item">
-                <button>Sesiones</button>
-                <img src="{{ asset('images/sesiones.png') }}" alt="Sesiones">
-            </div>
-            <div class="menu-item">
-                <button>Biblioteca</button>
-                <img src="{{ asset('images/biblioteca.png') }}" alt="Biblioteca">
-            </div>
-        </div>
-    </main>
+        </main>
+    </div>
 </body>
 </html>

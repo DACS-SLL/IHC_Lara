@@ -5,8 +5,7 @@ use App\Http\Controllers\HomeCt;
 use App\Http\Controllers\sesionCt;
 use App\Http\Controllers\LoginController;
 
-
-Route::get('/sesion', sesionCt::class);
+Route::get('/sesion', sesionCt::class)->name('sesiones.index');
 
 Route::get('/plantillas', [sesionCt::class, "showPlantillas"])->name('plantillas');
 
