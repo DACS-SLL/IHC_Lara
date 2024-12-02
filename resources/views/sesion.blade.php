@@ -5,6 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sesión de Aprendizaje</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body{
+            background-image: url('{{ asset('images/FondoP.png') }}');
+            background-size: 100% 100%;
+        }
+    </style>
 </head>
 <body class="bg-gray-50 font-sans m-0 p-0">
     <div class="container mx-auto text-center p-5">

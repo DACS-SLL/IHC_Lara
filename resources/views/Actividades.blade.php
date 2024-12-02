@@ -1,166 +1,56 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Actividades</title>
-    <!-- Estilos -->
+    <script src="https://cdn.tailwindcss.com"></script>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f8f8f8;
-            text-align: center;
-        }
-        /* Encabezado con marco 3D */
-        .header {
-            border: 2px solid #6b47dc; /* Contorno morado */
-            background-color: white;
-            padding: 10px 50px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Efecto 3D */
-        }
-        .header img {
-            height: 50px;
-        }
-        .header .title {
-            font-size: 28px;
-            flex-grow: 1;
-            text-align: center;
-            font-weight: bold;
-            color: #6b47dc;
-        }
-        .header .home-icon {
-            cursor: pointer;
-        }
-        /* Contenedor del fondo */
-        .background-container {
-            background-image: url("{{ asset('images/FondoP.png') }}"); /* Imagen de fondo */
-            background-size: cover; /* Cubre todo el contenedor */
-            background-position: center; /* Centra la imagen */
-            padding: 70px 0; /* Aumenta el espaciado superior e inferior */
-            margin-top: 40px; /* Espaciado superior */
-        }
-        /* Contenido principal */
-        .content {
-            margin: 0 20px; /* Ajusta la separación */
-        }
-        h1 {
-            font-size: 36px;
-            color: #333;
-        }
-        /* Contenedor principal de las actividades */
-        .activity-container {
-            display: flex;
-            justify-content: center;
-            gap: 40px; /* Espaciado entre actividades */
-            margin-top: 20px;
-            flex-wrap: wrap; /* Permite que se ajusten en pantallas pequeñas */
-        }
-        /* Contenedor individual para botón e imagen */
-        .activity {
-            display: flex;
-            flex-direction: column; /* Alinear elementos en columna */
-            align-items: center; /* Centrar elementos horizontalmente */
-            text-align: center; /* Opcional: Alinear texto centrado */
-        }
-        /* Botones */
-        .button {
-            background-color: #00a8e8;
-            color: white;
-            padding: 20px 50px; /* Ajuste del ancho con padding */
-            width: 300px; /* Ancho uniforme opcional */
-            border: none;
-            border-radius: 10px;
-            cursor: pointer;
-            font-size: 22px;
-            font-weight: bold;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Efecto 3D */
-            transition: transform 0.2s;
-        }
-        .button:hover {
-            transform: scale(1.1); /* Agranda el botón al pasar el cursor */
-        }
-        .button.science {
-            background-color: #9c27b0;
-        }
-        .button.communication {
-            background-color: #ff7043;
-        }
-        /* Imágenes asociadas */
-        .activity img {
-            width: 250px; /* Tamaño de la imagen */
-            height: auto;
-            margin-top: 15px; /* Espaciado entre el botón y la imagen */
-            transition: transform 0.2s;
-        }
-        .activity img:hover {
-            transform: scale(1.1); /* Agranda al pasar el cursor */
-        }
-        /* Estilo para la flecha en la parte inferior izquierda */
-        .back-icon {
-            position: fixed;
-            bottom: 20px; /* Distancia desde la parte inferior */
-            left: 20px;   /* Distancia desde la parte izquierda */
-            width: 50px;  /* Tamaño de la flecha */
-            height: auto;
-            cursor: pointer;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Efecto de sombra */
-            transition: transform 0.2s;
-        }
-        .back-icon:hover {
-            transform: scale(1.1); /* Efecto de agrandamiento al pasar el cursor */
+            background-image: url('{{ asset('images/FondoP.png') }}');
+            background-size: 100% 100%;
         }
     </style>
 </head>
-<body>
-    <!-- Encabezado -->
-    <div class="header">
-        <img src="{{ asset('images/logo.png') }}" alt="Logo de Innovaeduca">
-        <div class="title">Actividades</div>
-        <img src="{{ asset('images/home.jpg') }}" alt="Inicio" class="home-icon" onclick="goToHome()">
-    </div>
-
-    <!-- Contenedor con fondo para los botones e imágenes -->
-    <div class="background-container">
-        <div class="content">
-            <h1>JUEGOS</h1>
-            <div class="activity-container">
-                <div class="activity">
-                    <button class="button math" onclick="showMessage('Juegos de Matemáticas')">Matemática</button>
-                    <img src="{{ asset('images/Matematicas.jpg') }}" alt="Matemáticas">
-                </div>
-                <div class="activity">
-                    <button class="button science" onclick="showMessage('Juegos de Ciencias')">Ciencia</button>
-                    <img src="{{ asset('images/Ciencias.jpg') }}" alt="Ciencias">
-                </div>
-                <div class="activity">
-                    <button class="button communication" onclick="showMessage('Juegos de Comunicación')">Comunicación</button>
-                    <img src="{{ asset('images/Comunicacion.jpg') }}" alt="Comunicación">
-                </div>
+<body class="bg-gray-50 font-sans m-0 p-0">
+    <div class="container mx-auto text-center p-5">
+        <header class="flex items-center justify-between bg-white p-4 shadow-md">
+            <div class="flex items-center">
+                <img src="{{ asset('images/logo.png') }}" alt="Logo InnovEduca" class="h-12">
             </div>
+            <a href="{{ route('menu') }}" class="flex items-center">
+                <img src="{{ asset('images/home.png') }}" alt="Home" class="h-12 w-12 mr-2">
+                <span class="text-indigo-700 text-xl font-bold">Menú</span>
+            </a>
+        </header>        
+        <main class="mt-10">
+            <h2 class="text-5xl text-purple-600 font-bold mb-9">Juegos</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10 mb-5">
+                <div class="menu-item flex flex-col items-center">
+                    <a href="{{ route('sesiones.index') }}" class="flex items-center justify-center w-full px-10 py-6 bg-blue-500 text-white text-xl rounded-lg transition duration-300 hover:bg-blue-700 ml-auto mr-auto">
+                        Matematicas
+                    </a>
+                    <img src="{{ asset('images/Matematicas.png') }}" alt="Matematicas" class="w-72 h-64 mt-4">
+                </div>
+                <div class="menu-item flex flex-col items-center">
+                    <a href="{{ route('sesiones.index') }}" class="flex items-center justify-center w-full px-10 py-6 bg-green-500 text-white text-xl rounded-lg transition duration-300 hover:bg-green-700 ml-auto mr-auto">
+                        Comunicacion
+                    </a>
+                    <img src="{{ asset('images/Comunicacion.png') }}" alt="Comunicacion" class="w-64 h-64 mt-4">
+                </div>
+                <div class="menu-item flex flex-col items-center">
+                    <a href="{{ route('sesiones.index') }}" class="flex items-center justify-center w-full px-10 py-6 bg-red-500 text-white text-xl rounded-lg transition duration-300 hover:bg-red-700 ml-auto mr-auto">
+                        Ciencia
+                    </a>
+                    <img src="{{ asset('images/Ciencias.png') }}" alt="Ciencia" class="w-64 h-64 mt-4">
+                </div>
+            </div>            
+        </main>
+        <div>
+            <a href="{{ route('sesiones.index') }}" class="flex items-center">
+                <img src="{{ asset('images/flechaIzq.png') }}" alt="Home" class="h-16 w-16 mr-2">
+            </a>
         </div>
     </div>
-
-    <!-- Flecha de regreso -->
-    <img src="{{ asset('images/flechaIzq.png') }}" alt="Flecha Regresar" class="back-icon" onclick="goBack()">
-
-    <!-- Scripts -->
-    <script>
-        function showMessage(message) {
-            alert(message);
-        }
-
-        function goToHome() {
-            window.location.href = "{{ url('/') }}"; // Ajusta según tu ruta de inicio
-        }
-
-        function goBack() {
-            window.history.back();  // Regresa a la página anterior
-        }
-    </script>
 </body>
 </html>
