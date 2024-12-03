@@ -9,6 +9,7 @@ use App\Http\Controllers\bibliotecaCt;
 use App\Http\Controllers\ActividadesCt;
 use App\Http\Controllers\calendarCt;
 use App\Http\Controllers\MaterialCt;
+use App\Http\Controllers\buscarMatCt;
 
 // Rutas generales
 Route::get('/', [LoginCt::class, 'login'])->name('login');
@@ -52,3 +53,6 @@ Route::get('/programacion', [ActividadesCt::class, 'programacion'])->name('ver.p
 Route::get('/agregar-material', [MaterialCt::class, 'create'])->name('material.create');
 Route::post('/agregar-material', [MaterialCt::class, 'store'])->name('material.store');
 
+Route::get('/agregar-material', [buscarMatCt::class, 'create'])->name('material.creates');
+Route::post('/agregar-material', [buscarMatCt::class, 'store'])->name('material.stores');
+Route::get('/buscar-material', [buscarMatCt::class, 'buscar'])->name('material.buscar');
