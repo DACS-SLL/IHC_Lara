@@ -13,28 +13,32 @@
             margin: 0;
             padding: 0;
         }
+
         .logo {
             margin-top: 50px;
         }
 
         .logo img {
-            width: 300px;
+            width: 80%; 
+            max-width: 300px; 
         }
 
         .login-container {
-            width: 400px;
+            width: 90%; 
+            max-width: 400px; 
             margin: 20px auto;
             padding: 40px;
             background: rgba(255, 255, 255, 0.9);
             border-radius: 8px;
-            text-align: left; /* Alineación del texto */
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            text-align: left;
         }
 
         .login-container h2 {
             text-align: center;
             color: #9b59b6;
             margin-bottom: 20px;
+            font-size: 1.8rem; 
         }
 
         .login-container label {
@@ -69,6 +73,21 @@
         .login-container button:hover {
             background: #2980b9;
         }
+
+        
+        @media (max-width: 480px) {
+            .login-container {
+                padding: 20px; 
+            }
+
+            .login-container h2 {
+                font-size: 1.5rem; 
+            }
+
+            .login-container input, .login-container button {
+                font-size: 14px; 
+            }
+        }
     </style>
 </head>
 <body>
@@ -80,7 +99,7 @@
         <h2>Ingrese su cuenta</h2>
         <form method="POST" action="{{ route('login.process') }}">
             @csrf
-            <!-- Campos del formulario -->
+           
             <div>
                 <label for="usuario">Usuario:</label>
                 <input type="text" id="usuario" name="usuario" required>
