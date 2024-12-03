@@ -1,10 +1,16 @@
 // resources/js/matematicas.js
 
 const operaciones = [
-    { pregunta: "5 + 3", respuesta: "8" },
-    { pregunta: "10 - 7", respuesta: "3" },
-    { pregunta: "4 x 2", respuesta: "8" },
-    { pregunta: "9 / 3", respuesta: "3" },
+    { pregunta: "¿Cuántos dedos tienes en una mano?", respuesta: "5" },
+    { pregunta: "Si tienes 3 manzanas y te dan 2 más, ¿cuántas manzanas tienes ahora?", respuesta: "5" },
+    { pregunta: "¿Cuál es el número que viene después del 4?", respuesta: "5" },
+    { pregunta: "¿Qué es más: 6 o 8?", respuesta: "8" },
+    { pregunta: "Si tienes 2 manzanas y te dan 3 más, ¿cuántas manzanas tienes en total?", respuesta: "5" },
+    { pregunta: "¿Cuántos ojos tiene una persona?", respuesta: "2" },
+    { pregunta: "¿Cuántas patas tiene un perro?", respuesta: "4" },
+    { pregunta: "Si tienes 1 naranja y te dan 1 más, ¿cuántas naranjas tienes ahora?", respuesta: "2" },
+    { pregunta: "¿Cuántos lados tiene un cuadrado?", respuesta: "4" },
+    { pregunta: "¿Qué número es más grande: 3 o 7?", respuesta: "7" }
 ];
 
 let tiempoRestante = 40;

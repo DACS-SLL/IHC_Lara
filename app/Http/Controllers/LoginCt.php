@@ -34,7 +34,7 @@ class LoginCt extends Controller
         // Opciones del menú principal
         $opciones = [
             [
-                'nombre' => 'Reportes',
+                'nombre' => 'Calendar',
                 'imagen' => asset('images/tarea.png'),
             ],
             [

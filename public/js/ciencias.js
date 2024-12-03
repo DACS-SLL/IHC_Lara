@@ -2,25 +2,30 @@
 
 const preguntas = [
     {
-        pregunta: "¿Cuál es el planeta más cercano al sol?",
-        opciones: ["Venus", "Marte", "Mercurio", "Tierra"],
-        respuestaCorrecta: "Mercurio"
+        pregunta: "¿De qué color es el cielo durante el día?",
+        opciones: ["Azul", "Rojo", "Verde", "Amarillo"],
+        respuestaCorrecta: "Azul"
     },
     {
-        pregunta: "¿Qué parte de la planta realiza la fotosíntesis?",
-        opciones: ["Raíz", "Hoja", "Flor", "Fruto"],
-        respuestaCorrecta: "Hoja"
+        pregunta: "¿De dónde viene el sol por la mañana?",
+        opciones: ["Del norte", "Del sur", "Del este", "Del oeste"],
+        respuestaCorrecta: "Del este"
     },
     {
-        pregunta: "¿Cuántos huesos tiene el cuerpo humano adulto?",
-        opciones: ["206", "205", "210", "208"],
-        respuestaCorrecta: "206"
+        pregunta: "¿Qué crees que pasa cuando una planta no recibe agua?",
+        opciones: ["Crecera más rápido", "Se pondrá triste", "Se morirá", "Se hace más grande"],
+        respuestaCorrecta: "Se morirá"
     },
     {
-        pregunta: "¿Qué gas es el más abundante en la atmósfera de la Tierra?",
-        opciones: ["Oxígeno", "Nitrógeno", "Hidrógeno", "Dióxido de carbono"],
-        respuestaCorrecta: "Nitrógeno"
+        pregunta: "¿Cómo se llama el animal que puede volar y tiene plumas?",
+        opciones: ["Perro", "Gato", "Pájaro", "Pez"],
+        respuestaCorrecta: "Pájaro"
     },
+    {
+        pregunta: "¿Qué necesitas para hacer crecer una planta: agua, sol o helado?",
+        opciones: ["Agua", "Helado", "Sol", "Jugo"],
+        respuestaCorrecta: "Agua"
+    }    
 ];
 
 let tiempoRestante = 10;

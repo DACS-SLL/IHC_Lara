@@ -11,3 +11,4 @@ class recursosCt extends Controller
         return view('Sesion/recursos');
     }
 }
+
