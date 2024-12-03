@@ -26,7 +26,6 @@
                 <span class="text-indigo-700 text-xl font-bold">Menú</span>
             </a>
         </header>
-
         <!-- Subtítulo del juego -->
         <h1 class="text-indigo-700 text-2xl font-bold mt-6 bg-white inline-block px-4 py-2 rounded-lg">Juego de Comunicación: Adivina la Palabra</h1>
 

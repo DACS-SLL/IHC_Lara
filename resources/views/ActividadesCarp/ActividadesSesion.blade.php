@@ -57,7 +57,7 @@
 
         <!-- Botón de retroceso -->
         <div>
-            <a href="{{ route('actividades') }}" class="flex items-center">
+            <a href="{{ route('sesiones.index') }}" class="flex items-center">
                 <img src="{{ asset('images/flechaIzq.png') }}" alt="Regresar" class="h-16 w-16 mr-2">
             </a>
         </div>

@@ -129,16 +129,15 @@
 <body class="bg-gray-50 font-sans m-0 p-0">
     <div class="container mx-auto text-center p-5">
         <!-- Encabezado -->
-        <header>
-            <div class="logo">
-                <img src="{{ asset('images/logo.png') }}" alt="Logo InnovEduca">
+        <header class="flex items-center justify-between bg-white p-4 shadow-md">
+            <div class="flex items-center">
+                <img src="{{ asset('images/logo.png') }}" alt="Logo InnovEduca" class="h-12">
             </div>
             <a href="{{ route('menu') }}" class="flex items-center">
-                <img src="{{ asset('images/home.png') }}" alt="Home" class="h-6 w-6 mr-2"> <!-- Reducir tamaño del home -->
-                <span class="text-indigo-700 text-lg font-bold">Menú</span> <!-- Ajustar tamaño de texto -->
+                <img src="{{ asset('images/home.png') }}" alt="Home" class="h-12 w-12 mr-2">
+                <span class="text-indigo-700 text-xl font-bold">Menú</span>
             </a>
-        </header>
-
+        </header> 
         <!-- Contenido del juego -->
         <div class="contenido">
             <h1>Juego de Ciencia</h1>
