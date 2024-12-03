@@ -43,5 +43,11 @@ Route::post('/plantillas/registrar-sesiones', [PlantillasCt::class, 'store'])->n
 // Ruta para multimedia
 Route::get('/multimedia', [recursosCt::class, '__invoke'])->name('recursos.index');
 
+Route::get('/calendar', [calendarCt::class, '__invoke'])->name('calendar.index');
+
 //Ruta para calendar
 Route::get('/calendar', calendarCt::class)->name('Calendar.index');
+
+//Ruta para programacion
+Route::get('/programacion', [ActividadesCt::class, 'programacion'])->name('ver.programacion');
+

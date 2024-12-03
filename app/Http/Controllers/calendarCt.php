@@ -8,6 +8,6 @@ class calendarCt extends Controller
 {
     public function __invoke()
     {
-        return view('Principal/calendar');
+        return view('calendar.index'); // Vista del calendario
     }
 }
