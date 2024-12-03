@@ -18,8 +18,9 @@ class sesionCt extends Controller
 
     public function showActividades()
     {
-        return view('Sesion/Actividades');
+    return view('Sesion/ActividadesSesion'); // Cambia a una vista más específica
     }
+
 
     public function showMultimedia()
     {
