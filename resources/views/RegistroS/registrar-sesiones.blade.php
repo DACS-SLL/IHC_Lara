@@ -31,6 +31,15 @@
                     {{ session('success') }}
                 </div>
             @endif
+            @if($errors->any())
+                <div class="bg-red-500 text-white p-4 rounded mb-4">
+                    <ul>
+                        @foreach($errors->all() as $error)
+                            <li>{{ $error }}</li>
+                        @endforeach
+                    </ul>
+                </div>
+            @endif
             <form action="{{ route('sesiones.store') }}" method="POST" enctype="multipart/form-data" class="bg-white p-6 rounded-lg shadow-md">
                 @csrf
                 <div class="mb-4">
@@ -49,7 +58,7 @@
             </form>
         </main>
         <div class="boton-regresar mt-10">
-            <a href="{{ route('sesiones.index') }}" class="flex items-center">
+            <a href="{{ route('plantillas') }}" class="flex items-center">
                 <img src="{{ asset('images/flechaIzq.png') }}" alt="Regresar" class="h-16 w-16 mr-2">
             </a>
         </div>

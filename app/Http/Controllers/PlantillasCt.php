@@ -27,13 +27,13 @@ class PlantillasCt extends Controller
         $request->validate([
             'nombre' => 'required|string|max:255',
             'seccion' => 'required|string|max:255',
-            'archivo' => 'required|file|max:2048' // Máximo 2 GB
+            'archivo' => 'required|file|mimes:pdf|max:2048' // Solo archivos PDF, máximo 2 MB
         ]);
 
-        // Almacenar el archivo subido
+        // Almacenar el archivo subido en la carpeta 'public/archivos'
         $path = $request->file('archivo')->store('archivos', 'public');
 
-        // Guardar la sesión en la base de datos (opcional)
+        // (Opcional) Guardar la sesión en la base de datos
         // Sesion::create([
         //     'nombre' => $request->nombre,
         //     'seccion' => $request->seccion,
