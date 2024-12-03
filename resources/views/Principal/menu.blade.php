@@ -26,8 +26,8 @@
             <div class="flex items-center justify-center gap-10 mb-5">
                 <div class="flex items-start gap-14">
                     <div class="menu-item flex flex-col items-center">
-                        <button class="px-8 py-4 mb-4 text-white bg-purple-600 text-2xl rounded hover:bg-purple-700" onclick="window.location='{{ route('sesiones.index') }}'">Reportes</button>
-                        <img src="{{ asset('images/tarea.png') }}" alt="Reportes" class="w-48 h-48">
+                        <button class="px-8 py-4 mb-4 text-white bg-purple-600 text-2xl rounded hover:bg-purple-700" onclick="window.location='{{ route('Calendar.index') }}'">Calendar</button>
+                        <img src="{{ asset('images/tarea.png') }}" alt="Calendar" class="w-48 h-48">
                     </div>
                     <div class="menu-item flex flex-col items-center">
                         <button class="px-8 py-4 mb-4 text-white bg-purple-600 text-2xl rounded hover:bg-purple-700" onclick="window.location='{{ route('sesiones.index') }}'">Sesiones</button>

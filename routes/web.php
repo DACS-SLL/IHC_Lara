@@ -7,6 +7,7 @@ use App\Http\Controllers\recursosCt;
 use App\Http\Controllers\PlantillasCt;
 use App\Http\Controllers\bibliotecaCt;
 use App\Http\Controllers\ActividadesCt;
+use App\Http\Controllers\calendarCt;
 
 // Rutas generales
 Route::get('/', [LoginCt::class, 'login'])->name('login');
@@ -41,3 +42,6 @@ Route::post('/plantillas/registrar-sesiones', [PlantillasCt::class, 'store'])->n
 
 // Ruta para multimedia
 Route::get('/multimedia', [recursosCt::class, '__invoke'])->name('recursos.index');
+
+//Ruta para calendar
+Route::get('/calendar', calendarCt::class)->name('Calendar.index');
