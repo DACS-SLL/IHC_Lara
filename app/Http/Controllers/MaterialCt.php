@@ -8,7 +8,7 @@ class MaterialCt extends Controller
 {
     public function create()
     {
-        return view('agregarMat');
+        return view('Biblioteca/agregarMat');
     }
 
     public function store(Request $request)

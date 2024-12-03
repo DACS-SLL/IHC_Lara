@@ -8,6 +8,7 @@ use App\Http\Controllers\PlantillasCt;
 use App\Http\Controllers\bibliotecaCt;
 use App\Http\Controllers\ActividadesCt;
 use App\Http\Controllers\calendarCt;
+use App\Http\Controllers\MaterialCt;
 
 // Rutas generales
 Route::get('/', [LoginCt::class, 'login'])->name('login');
@@ -16,10 +17,6 @@ Route::get('/menu', [LoginCt::class, 'menuPrincipal'])->name('menu');
 
 // Rutas para biblioteca
 Route::get('/biblioteca', [bibliotecaCt::class, 'index'])->name('biblioteca.index');
-Route::get('/biblioteca/buscar', [bibliotecaCt::class, 'buscarMaterial'])->name('buscar.material');
-Route::post('/biblioteca/buscar', [bibliotecaCt::class, 'buscarMaterialPost']);
-Route::get('/biblioteca/ingresar', [bibliotecaCt::class, 'ingresarMaterial'])->name('ingresar.material');
-Route::post('/biblioteca/ingresar', [bibliotecaCt::class, 'ingresarMaterialPost']);
 
 // Rutas para sesión
 Route::get('/sesion', [sesionCt::class, '__invoke'])->name('sesiones.index');
@@ -50,4 +47,8 @@ Route::get('/calendar', calendarCt::class)->name('Calendar.index');
 
 //Ruta para programacion
 Route::get('/programacion', [ActividadesCt::class, 'programacion'])->name('ver.programacion');
+
+//Ruta para material
+Route::get('/agregar-material', [MaterialCt::class, 'create'])->name('material.create');
+Route::post('/agregar-material', [MaterialCt::class, 'store'])->name('material.store');
 

@@ -34,7 +34,7 @@
                     </a>
 
                     <!-- Botón Ingresar Material -->
-                    <a href="<?php echo e(route('ingresar.material')); ?>" 
+                    <a href="<?php echo e(route('material.create')); ?>" 
                        class="block w-full px-10 py-6 bg-purple-600 text-white text-xl rounded-lg transition duration-300 hover:bg-purple-700">
                         Ingresar material
                     </a>

@@ -54,7 +54,7 @@
             </form>
         </main>
         <div class="boton-regresar mt-10">
-            <a href="{{ route('material.index') }}" class="flex items-center">
+            <a href="{{ route('biblioteca.index') }}" class="flex items-center">
                 <img src="{{ asset('images/flechaIzq.png') }}" alt="Regresar" class="h-16 w-16 mr-2">
             </a>
         </div>
