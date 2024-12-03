@@ -44,22 +44,54 @@
     </div>
 
     <script>
-        // Palabra correcta
-        const palabraCorrecta = "gato";
+        // Array de preguntas y respuestas
+        const preguntas = [
+            { pista: "Es un animal que dice 'miau'.", palabra: "gato" },
+            { pista: "Es un animal que dice 'guau'.", palabra: "perro" },
+            { pista: "Es un vehículo que vuela por el aire.", palabra: "avión" },
+            { pista: "Es un lugar donde aprendes muchas cosas.", palabra: "escuela" },
+            { pista: "Es un animal que vive en el agua y tiene una gran mandíbula.", palabra: "cocodrilo" },
+            { pista: "Es una fruta amarilla que puedes comer.", palabra: "plátano" },
+            { pista: "Es una bebida que viene de las vacas.", palabra: "leche" },
+            { pista: "Es una fruta que es roja y tiene semillas pequeñas en su superficie.", palabra: "fresa" },
+            { pista: "Es un instrumento musical que tiene teclas blancas y negras.", palabra: "piano" },
+            { pista: "Es un insecto que produce miel.", palabra: "abeja" }
+        ];
+
+        let preguntaActual = 0;
+
+        // Función para mostrar la siguiente pregunta
+        function mostrarPregunta() {
+            const pregunta = preguntas[preguntaActual];
+            document.getElementById('pista').textContent = `Pista: ${pregunta.pista}`;
+            document.getElementById('respuesta').value = '';
+            document.getElementById('resultado').textContent = '';
+        }
 
         // Función para verificar la respuesta
         function verificarRespuesta() {
             const respuestaUsuario = document.getElementById('respuesta').value.toLowerCase();
             const resultadoDiv = document.getElementById('resultado');
+            const palabraCorrecta = preguntas[preguntaActual].palabra;
 
             if (respuestaUsuario === palabraCorrecta) {
                 resultadoDiv.textContent = "¡Correcto! 🎉";
                 resultadoDiv.style.color = "green";
+                preguntaActual++;
+                if (preguntaActual < preguntas.length) {
+                    setTimeout(mostrarPregunta, 1000);  // Esperar un segundo antes de mostrar la siguiente pregunta
+                } else {
+                    resultadoDiv.textContent = "¡Felicidades, has completado el juego!";
+                    resultadoDiv.style.color = "blue";
+                }
             } else {
                 resultadoDiv.textContent = "¡Intenta nuevamente! ❌";
                 resultadoDiv.style.color = "red";
             }
         }
+
+        // Iniciar el juego mostrando la primera pregunta
+        mostrarPregunta();
     </script>
 </body>
 </html>
