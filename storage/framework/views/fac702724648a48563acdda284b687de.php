@@ -139,7 +139,30 @@
         </form>
     </div>
 
+    <!-- Música de fondo -->
+    <audio id="background-music" src="audio/InnoFn.mp3" autoplay loop></audio>
+
     <script>
+        
+        document.addEventListener('DOMContentLoaded', function () {
+        // Intentar reproducir el audio
+        const audio = document.getElementById('background-music');
+        audio.volume = 0.2;
+
+        // Reproducir el audio después de una interacción del usuario
+        function playAudio() {
+            audio.play().catch(function (error) {
+                console.log('La reproducción automática está bloqueada: ', error);
+            });
+            document.removeEventListener('click', playAudio);
+        }
+
+        document.addEventListener('click', playAudio);
+        });
+
+       // Configurar el volumen de la música de fondo
+        document.getElementById('background-music').volume = 0.2; // Volumen bajo
+
         // Mostrar mensaje por 3 segundos y luego ocultarlo
         setTimeout(function() {
             document.getElementById('mensaje').style.opacity = 0;
